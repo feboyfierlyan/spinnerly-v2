@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   title: "Spinnerly - Fair Spinner Wheel",
   description: "Sistem pembagian tugas yang adil dan transparan",
   generator: "v0.app",
+  icons: { icon: "/favicon.ico", shortcut: "/favicon.ico" },
 }
 
 export default function RootLayout({

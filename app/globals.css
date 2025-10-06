@@ -221,3 +221,9 @@ button:active:not(:disabled) {
   background: rgba(255, 255, 255, 0.9);
   box-shadow: 0 0 8px rgba(255, 255, 255, 0.45);
 }
+
+/* Added a subtle vignette overlay for content pages */
+.space-vignette {
+  pointer-events: none;
+  background: radial-gradient(1200px 800px at 50% 0%, rgba(0, 0, 0, 0.035), transparent 60%);
+}

@@ -27,7 +27,8 @@ export default async function HistoryPage({ params }: PageProps) {
   }
 
   return (
-    <div className="min-h-screen starry-bg-light">
+    <div className="relative min-h-dvh starry-bg-light">
+      <div aria-hidden className="absolute inset-0 space-vignette" />
       <HistoryView room={room} history={history || []} />
     </div>
   )
