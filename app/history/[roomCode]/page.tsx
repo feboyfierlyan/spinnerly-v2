@@ -26,5 +26,9 @@ export default async function HistoryPage({ params }: PageProps) {
     console.error("[v0] Error fetching history:", historyError)
   }
 
-  return <HistoryView room={room} history={history || []} />
+  return (
+    <div className="min-h-screen starry-bg-light">
+      <HistoryView room={room} history={history || []} />
+    </div>
+  )
 }

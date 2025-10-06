@@ -18,5 +18,9 @@ export default async function RoomPage({ params }: PageProps) {
     notFound()
   }
 
-  return <SpinnerRoom room={room} />
+  return (
+    <div className="min-h-screen starry-bg-light">
+      <SpinnerRoom room={room} />
+    </div>
+  )
 }

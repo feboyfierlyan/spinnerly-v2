@@ -20,7 +20,7 @@ export default function NotificationCard({ type, message, onClose }: Notificatio
   }, [onClose])
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/20 backdrop-blur-sm animate-fade-in">
+    <div className="fixed inset-0 z-[10000] flex items-center justify-center p-4 bg-black/20 backdrop-blur-sm animate-fade-in">
       <Card
         className="brilliant-card p-6 border-2 rounded-2xl max-w-md w-full animate-scale-in"
         style={{

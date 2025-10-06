@@ -371,20 +371,20 @@ export default function HistoryView({ room, history }: HistoryViewProps) {
 
         {/* Share Link */}
         <Card className="brilliant-card p-6 border border-gray-200 rounded-2xl mb-8 hover:shadow-lg transition-all duration-300">
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-[1fr_auto] items-start sm:items-center gap-3">
             <div className="flex-1 w-full">
               <p className="text-sm font-semibold text-gray-700 mb-2">Link Room</p>
               <input
                 type="text"
                 value={roomUrl}
                 readOnly
-                className="w-full px-4 py-2 text-sm bg-gray-50 rounded-xl border border-gray-200 text-gray-700"
+                className="w-full px-4 h-10 text-sm bg-gray-50 rounded-xl border border-gray-200 text-gray-700 overflow-hidden text-ellipsis select-all"
               />
             </div>
-            <div className="flex flex-col sm:flex-row items-stretch gap-2 w-full sm:w-auto">
+            <div className="w-full sm:w-auto flex flex-col sm:flex-row gap-2 sm:justify-end sm:flex-nowrap">
               <Button
                 onClick={() => copyToClipboard(roomUrl)}
-                className="bg-purple-600 hover:bg-purple-700 rounded-xl h-10 hover:scale-110 active:scale-95 transition-transform w-full sm:w-auto text-sm"
+                className="bg-purple-600 hover:bg-purple-700 rounded-xl h-10 hover:scale-110 active:scale-95 transition-transform w-full sm:w-auto sm:min-w-[120px] text-sm"
                 aria-label="Salin tautan room"
               >
                 <Copy className="w-4 h-4 mr-2" />
@@ -393,7 +393,7 @@ export default function HistoryView({ room, history }: HistoryViewProps) {
               <Button
                 onClick={downloadResultsImage}
                 disabled={isGenerating || history.length === 0}
-                className="bg-gray-900 hover:bg-gray-800 rounded-xl h-10 hover:scale-110 active:scale-95 transition-transform w-full sm:w-auto text-sm"
+                className="bg-gray-900 hover:bg-gray-800 rounded-xl h-10 hover:scale-110 active:scale-95 transition-transform w-full sm:w-auto sm:min-w-[180px] text-sm"
                 aria-busy={isGenerating}
                 aria-label="Unduh gambar hasil"
                 title={history.length === 0 ? "Belum ada riwayat untuk diunduh" : "Unduh gambar hasil"}

@@ -76,7 +76,8 @@
 }
 
 @theme inline {
-  --font-sans: var(--font-geist-sans);
+  --font-sans: "DIN Next Rounded", var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
   --font-mono: var(--font-geist-mono);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -156,4 +157,67 @@ button:active:not(:disabled) {
 /* Enhanced scale utility for active states */
 .active\:scale-98:active {
   transform: scale(0.98);
+}
+
+/* Soft input style to mimic friendly 'field card' appearance */
+.soft-input {
+  background: var(--color-input);
+  border-color: var(--color-border);
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 1rem; /* 16px */
+  height: 3rem; /* 48px */
+  padding-left: 1rem;
+  padding-right: 1rem;
+  box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.02);
+}
+
+.soft-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.03), 0 0 0 4px color-mix(in oklab, var(--color-primary) 15%, transparent);
+}
+
+/* pressable card utility for clear click feedback */
+.pressable-card {
+  cursor: pointer;
+  will-change: transform, box-shadow, filter;
+  transition: transform 180ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 220ms ease, filter 120ms linear;
+}
+.pressable-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08), 0 4px 10px rgba(0, 0, 0, 0.06);
+}
+.pressable-card:active {
+  transform: translateY(0);
+  filter: brightness(0.98);
+}
+.pressable-card:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 6px color-mix(in oklab, var(--color-primary) 24%, transparent);
+}
+
+/* subtle starry background for content pages (room/history) */
+.starry-bg-light {
+  background-color: var(--color-background);
+  background-image: radial-gradient(color-mix(in oklab, var(--color-foreground) 6%, transparent) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+/* tiny twinkling stars for hero */
+@keyframes twinkle {
+  from {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  to {
+    transform: scale(1.35);
+    opacity: 1;
+  }
+}
+.twinkle {
+  animation: twinkle 2.8s ease-in-out infinite alternate;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.45);
 }
