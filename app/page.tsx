@@ -134,8 +134,8 @@ export default function HomePage() {
               className="group w-full rounded-[28px] border border-white/20 bg-white/95 hover:bg-white shadow-[0_10px_30px_rgba(0,0,0,0.06)] hover:shadow-[0_16px_40px_rgba(0,0,0,0.08)] transition-all duration-200 p-8 md:p-12 text-left pressable-card focus-visible:ring-4 focus-visible:ring-purple-400/40"
             >
               <div className="flex items-center justify-center">
-                <div className="h-16 w-16 rounded-2xl grid place-items-center bg-purple-100 text-purple-600 shadow-inner">
-                  <ArrowRight className="h-7 w-7" />
+                <div className="h-16 w-16 rounded-2xl grid place-items-center bg-purple-100 text-purple-600 shadow-inner transition-transform duration-200 will-change-transform group-hover:scale-110 group-active:scale-100">
+                  <ArrowRight className="h-7 w-7 transition-transform duration-200 group-hover:scale-110" />
                 </div>
               </div>
               <div className="mt-6 text-center">
@@ -157,8 +157,8 @@ export default function HomePage() {
               className="group w-full rounded-[28px] border border-white/20 bg-white/95 hover:bg-white shadow-[0_10px_30px_rgba(0,0,0,0.06)] hover:shadow-[0_16px_40px_rgba(0,0,0,0.08)] transition-all duration-200 p-8 md:p-12 text-left pressable-card focus-visible:ring-4 focus-visible:ring-purple-400/40"
             >
               <div className="flex items-center justify-center">
-                <div className="h-16 w-16 rounded-2xl grid place-items-center bg-purple-100 text-purple-600 shadow-inner">
-                  <Plus className="h-7 w-7" />
+                <div className="h-16 w-16 rounded-2xl grid place-items-center bg-purple-100 text-purple-600 shadow-inner transition-transform duration-200 will-change-transform group-hover:scale-110 group-active:scale-100">
+                  <Plus className="h-7 w-7 transition-transform duration-200 group-hover:scale-110" />
                 </div>
               </div>
               <div className="mt-6 text-center">
